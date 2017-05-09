@@ -4,6 +4,22 @@ body {
     background-color: lightslategrey;
 }
 
+h1 {
+    font-size: 24px;
+    display: inline;
+}
+
+h2 {
+    font-size: 18px;
+    display: inline;
+}
+
+h3 {
+    font-size: 16px;
+    display: inline;
+    font-weight: normal;
+}
+
 header {
     width: 954px;
     height: 150px;
@@ -35,6 +51,7 @@ nav div {
     text-align: center;
     line-height: 30px;
     left: 0;
+    font-size: 16px;
     display: block;
 }
 
@@ -46,4 +63,28 @@ nav div {
     top: 140px;
     padding: 20px 10px;
     margin: auto;
+}
+
+.forum_group {
+    width: 934px;
+    background-color: darkgrey;
+    min-height: 50px;
+    border-radius: 10px;
+    border: 3px groove grey;
+    margin-bottom: 20px;
+}
+
+.forum_group_title {
+    width: 920px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 15px;
+    border-bottom: solid black 2px;
+}
+
+.forum {
+    width: 920px;
+    height: 40px;
+    padding-left: 15px;
+    border-bottom: 1px solid black;
 }
