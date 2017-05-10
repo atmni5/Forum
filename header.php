@@ -1,6 +1,7 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-
+    
 <head>
     
     <title>Forum</title>
@@ -18,10 +19,10 @@
         
         <nav>
         
-            <div id="home">Home</div>
+            <div id="home"><a href="index.php">Home</a></div>
             <div id="profile">Profile</div>
             <div id="search">Search</div>
-            
+            <div id="login"><?php if(isset($_SESSION['U_ID']))echo '<a href="process_logout.php">Logout</a>';else echo '<a href="login.php">Login</a>'; ?></div>
         </nav>
         
     </header>

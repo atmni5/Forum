@@ -20,6 +20,22 @@ h3 {
     font-weight: normal;
 }
 
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
 header {
     width: 954px;
     height: 150px;
@@ -54,6 +70,9 @@ nav div {
     font-size: 16px;
     display: block;
 }
+nav div:last-child {
+    float: right;
+}
 
 #content {
     width: 940px;
@@ -69,7 +88,7 @@ nav div {
     width: 934px;
     background-color: darkgrey;
     min-height: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 3px groove grey;
     margin-bottom: 20px;
 }

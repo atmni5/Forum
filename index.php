@@ -1,16 +1,11 @@
 <?php
-    include 'header.html';
+    include 'header.php';
 ?>
 
 
 <?php
 
-    $con = mysqli_connect("198.91.81.2", "aarontum_admin1", "password", "aarontum_Forum");
-
-    if (mysqli_connect_errno()){
-        echo "Failed to connect to database: " . mysqli_connect_errno();
-        exit;
-    }
+    include('db_connection.php');
     
     $sql = "Select * from tbl_Forum_Group";
     $result = mysqli_query($con, $sql);
@@ -19,18 +14,16 @@
         
         while($row = mysqli_fetch_assoc($result)){
             echo '<div class="forum_group">';
-            echo '<div class="forum_group_title"><h1>' . $row['Forum_Group_Name'] . '<h1/></div>';
+            echo '<div class="forum_group_title"><h1>' . $row['Name'] . '<h1/></div>';
             
             $sql2 = "Select * from tbl_Forum where Forum_Group_ID = " . $row['U_ID'] . "";
-            if ($result2 = mysqli_query($con, $sql2)){
-                
-            }
+            $result2 = mysqli_query($con, $sql2);
             
             if (mysqli_num_rows($result2) > 0){
                 
                 while ($row2 = mysqli_fetch_assoc($result2)){
                     echo '<div class="forum">';
-                    echo '<h2>' . $row2['Name'] . '</h2><br/>';
+                    echo '<h2><a href="forum_threads.php?forumgroup='. $row['Name'] .'&forum=' . $row2['Name'] . '&forumID=' . $row2['U_ID'] .'">' . $row2['Name'] . '</a></h2><br/>';
                     echo '<h3>' . $row2['Description'] . '</h3>';
                     echo '</div>';
                 }
@@ -50,5 +43,5 @@
 
 
 <?php
-    include 'footer.html';
+    include 'footer.php';
 ?>
