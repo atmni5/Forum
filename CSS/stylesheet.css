@@ -107,3 +107,120 @@ nav div:last-child {
     padding-left: 15px;
     border-bottom: 1px solid black;
 }
+
+.forum_threads:first-child {
+    width: 924px;
+    background-color: darkgrey;
+    min-height: 40px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 3px groove grey;
+    border-left: 3px groove grey;
+    border-right: 3px groove grey;
+}
+
+.forum_thread {
+    width: 924px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: darkgrey;
+    min-height: 40px;
+    border-left: 3px groove grey;
+    border-right: 3px groove grey;
+}
+
+.forum_threads:last-child {
+    width: 924px;
+    background-color: darkgrey;
+    min-height: 40px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 3px groove grey;
+}
+
+.forum_threads:only-child {
+    width: 924px;
+    background-color: darkgrey;
+    min-height: 40px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius:5px;
+    border: 3px groove grey;
+}
+
+#reply_button {
+    margin-bottom: 5px;
+}
+
+.thread_post:first-child {
+    width:940px;
+    border-top: 1px solid black;
+    min-height: 250px;
+    display: table;
+}
+
+.thread_post {
+    width:940px;
+    border-top: 1px solid black;
+    min-height: 250px;
+    display: table;
+}
+
+.thread_post:last-child {
+    width:940px;
+    border-bottom: 1px solid black;
+    min-height: 250px;
+    display: table;
+}
+
+.thread_post:only-child {
+    width:940px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    min-height: 250px;
+    display: table;
+}
+
+.thread_post_left_col {
+    width: 180px;
+    border-right: 10px grey double;
+    height: 100%;
+    display: table-cell;
+}
+
+.thread_post_right_col {
+    width: 739px;
+    height: 100%;
+    padding: 10px;
+    display: table-cell;
+}
+
+#post_reply {
+    margin: 20px auto;
+}
+
+#post_reply form{
+    width: 500px;
+    margin: auto;
+}
+
+#post_reply  textarea {
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    resize: none;
+    overflow-x: hidden;
+}
+
+#reply_submit {
+    float: right;
+    margin: 10px;
+}

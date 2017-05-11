@@ -16,7 +16,7 @@
     <header>
     
         <img src="http://aarontumini.x10host.com/forum/D:/Google%20Drive/Webhost/Forum/Images/Banner.png" width="960" />
-        
+    
         <nav>
         
             <div id="home"><a href="index.php">Home</a></div>

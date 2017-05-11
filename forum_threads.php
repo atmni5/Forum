@@ -1,5 +1,5 @@
 <?php 
-    include 'header.html';
+    include 'header.php';
 ?>
 
 <?php
@@ -19,9 +19,9 @@
 
     while ($row = mysqli_fetch_assoc($result)){
         
-        echo '<div class="forum_threads">';
+        echo '<div class="forum_threads"><h3 style="font-weight:bold;"><a href="thread_posts.php?threadID=' . $row['U_ID'] . '">';
         echo $row['Name'];
-        echo '</div>';
+        echo '</a></h3></div>';
         
     }
 
