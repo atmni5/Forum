@@ -2,7 +2,7 @@
     include 'header.php';
 ?>
 
-<div id="reply_button"><img src="http://aarontumini.x10host.com/forum/D:/Google%20Drive/Webhost/Forum/Images/Reply_Button.png"></div>
+<div id="reply_button"><a href="#post_reply"><img src="http://aarontumini.x10host.com/forum/D:/Google%20Drive/Webhost/Forum/Images/Reply_Button.png"></a></div>
 
 <?php
 
@@ -41,7 +41,7 @@
 
     if (isset($_SESSION['U_ID'])){
         echo '<div id="post_reply">';
-        echo '<form action="post_reply.php" method="get">';
+        echo '<form action="post_reply.php" method="post">';
         echo '<input type="hidden" name="threadID" value="' . $threadID . '" />';
         echo '<textarea name="message" placeholder="Post reply..."></textarea>';
         echo '<input id="reply_submit" type="submit" value="Post Reply" />';
