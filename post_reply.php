@@ -1,8 +1,6 @@
 <?php
-    include 'header.php';
-?>
-
-<?php
+    
+    session_start();
 
     if (!isset($_SESSION['U_ID'])){
         header('Location: index.php');
@@ -19,8 +17,4 @@
 
     header('Location: thread_posts.php?threadID='.$threadID.'');
 
-?>
-
-<?php
-    include 'footer.php'
 ?>

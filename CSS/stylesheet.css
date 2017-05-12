@@ -224,3 +224,20 @@ nav div:last-child {
     float: right;
     margin: 10px;
 }
+
+#edit_details {
+    width: 500px;
+    height: 350px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#edit_details td, #edit_details tr {
+    padding:5px 0;
+}
+
+#edit_name, #edit_name_input, #edit_age, #edit_age_input {
+    float: right;
+    margin: 10px 0;
+}
+

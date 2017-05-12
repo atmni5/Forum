@@ -20,7 +20,7 @@
         <nav>
         
             <div id="home"><a href="index.php">Home</a></div>
-            <div id="profile"><a href="profile.php">Profile</a></div>
+            <?php if (isset($_SESSION['U_ID'])) echo '<div id="profile"><a href="profile.php">Profile</a></div>'; ?>
             <div id="search">Search</div>
             <div id="login"><?php if(isset($_SESSION['U_ID']))echo '<a href="process_logout.php">Logout</a>';else echo '<a href="login.php">Login</a>'; ?></div>
         </nav>
