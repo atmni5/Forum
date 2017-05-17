@@ -2,9 +2,15 @@
     include 'header.php';
 ?>
 
-<div id="reply_button"><a href="#post_reply"><img src="http://aarontumini.x10host.com/forum/D:/Google%20Drive/Webhost/Forum/Images/Reply_Button.png"></a></div>
-
 <?php
+
+    echo '<div id="reply_button">';
+    if (isset($_SESSION['U_ID'])){
+        echo '<a href="#post_reply"><img id="reply_button_image" src="http://aarontumini.x10host.com/forum/D:/Google%20Drive/Webhost/Forum/Images/Reply_Button.png" /></a>';
+    } else {
+        echo '<a href="registration.php"><img id="reply_button_image" src="http://aarontumini.x10host.com/forum/D:/Google%20Drive/Webhost/Forum/Images/Reply_Button.png" /></a>';
+    }
+    echo '</div>';
 
     include('db_connection.php');
 

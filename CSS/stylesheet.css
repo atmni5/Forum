@@ -70,7 +70,7 @@ nav div {
     font-size: 16px;
     display: block;
 }
-nav div:last-child {
+nav #login, nav #registration {
     float: right;
 }
 
@@ -225,19 +225,24 @@ nav div:last-child {
     margin: 10px;
 }
 
-#edit_details {
+#edit_details, #details {
     width: 500px;
     height: 350px;
     margin: 30px auto;
     padding: 20px;
 }
 
-#edit_details td, #edit_details tr {
+#edit_details td, #edit_details tr, #details td, #details tr {
     padding:5px 0;
 }
 
-#edit_name, #edit_name_input, #edit_age, #edit_age_input {
+#edit_name, #edit_name_input, #edit_age, #edit_age_input, #details_name_input, #details_age_input, #details_username_input {
     float: right;
     margin: 10px 0;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 

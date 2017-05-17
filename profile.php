@@ -78,7 +78,7 @@
         echo '<h2>Age:</h2>';
         echo '</td>';
         echo '<td>';
-        echo '<div id="edit_age">'.$rows['Age'].'</div><input id="edit_age_input" type="text" value="'.$rows['Age'].'" name="age" style="display:none;" />';
+        echo '<div id="edit_age">'.$rows['Age'].'</div><input id="edit_age_input" type="number" value="'.$rows['Age'].'" name="age" style="display:none;" />';
         echo '</td>';
         echo '</tr>';
         echo '<tr class="edit_password" style="visibility:hidden;">';

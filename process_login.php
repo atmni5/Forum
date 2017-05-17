@@ -1,8 +1,8 @@
 <?php
 
     include('db_connection.php');
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = mysqli_real_escape_string($con, $_POST['username']);
+    $password = sha1(mysqli_real_escape_string($con, $_POST['password']));
     $sql = "Select * from tbl_Users where Username = '$username' && Password = '$password'";
     echo $sql;
     $result = mysqli_query($con, $sql);

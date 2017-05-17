@@ -6,7 +6,7 @@
         header('Location: index.php');
     }
 
-    $message = $_POST['message'];
+    $message = mysqli_real_escape_string($con, $_POST['message']);
     $threadID = $_POST['threadID'];
 
     include 'db_connection.php';
