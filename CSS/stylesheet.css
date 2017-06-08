@@ -47,6 +47,7 @@ header {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-style: none ridge ridge ridge;
+    background-image:url(http://aarontumini.x10host.com/forum/D:/Google%20Drive/Webhost/Forum/Images/Banner.png)
 }
 
 nav {
@@ -108,6 +109,28 @@ nav #login, nav #registration {
     border-bottom: 1px solid black;
 }
 
+.forum_threads {
+    width: 924px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: darkgrey;
+    min-height: 40px;
+    border-left: 3px groove grey;
+    border-right: 3px groove grey;
+}
+
+.forum_threads:only-child {
+    width: 924px;
+    background-color: darkgrey;
+    min-height: 40px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius:5px;
+    border: 3px groove grey;
+}
+
 .forum_threads:first-child {
     width: 924px;
     background-color: darkgrey;
@@ -122,17 +145,6 @@ nav #login, nav #registration {
     border-right: 3px groove grey;
 }
 
-.forum_thread {
-    width: 924px;
-    padding-top: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: darkgrey;
-    min-height: 40px;
-    border-left: 3px groove grey;
-    border-right: 3px groove grey;
-}
-
 .forum_threads:last-child {
     width: 924px;
     background-color: darkgrey;
@@ -142,17 +154,6 @@ nav #login, nav #registration {
     padding-right: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 3px groove grey;
-}
-
-.forum_threads:only-child {
-    width: 924px;
-    background-color: darkgrey;
-    min-height: 40px;
-    padding-top: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius:5px;
     border: 3px groove grey;
 }
 
@@ -246,3 +247,45 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+#search_bar {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#search_form {
+    width:500px;
+    margin:auto;
+}
+
+#search_form input  {
+    float: right;
+}
+
+#search_form tr {
+    height: 60px;
+}
+
+#search_form td {
+    vertical-align: top;
+}
+
+.search_list {
+    width:200px;
+}
+
+.bold {
+    font-weight: 900;
+    display: inline;
+}
+
+.forum_threads_subtext {
+    height: 15px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.thread_replys {
+    border-left: 1px black solid;
+    vertical-align: text-top;
+    font-size: 14px;
+}
