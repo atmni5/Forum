@@ -1,6 +1,11 @@
+*{
+    box-sizing: content-box;
+}
+
 body {
     width: 900px;
     margin: auto;
+    height: 100%;
     background-color: lightslategrey;
 }
 
@@ -73,6 +78,7 @@ nav div {
 }
 nav #login, nav #registration {
     float: right;
+    margin-right: 20px;
 }
 
 #content {
@@ -200,8 +206,9 @@ nav #login, nav #registration {
 .thread_post_right_col {
     width: 739px;
     height: 100%;
-    padding: 10px;
+    padding: 10px 10px 39px 10px;
     display: table-cell;
+    position: relative;
 }
 
 #post_reply {
@@ -291,16 +298,16 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 .thread_tools {
-    position: relative;
-    bottom: 0px;
-    right: 0px;
+    position: absolute;
+    bottom: 34px;
+    width: 100%;
 }
 
 .thread_delete {
     width: 80px;
-    height: 30px;
-    border-radius: 10px;
+    height: 25px;
     text-align: center;
     border: 2px solid black;
-    right: 0px;
+    position: absolute;
+    right: 10px;
 }

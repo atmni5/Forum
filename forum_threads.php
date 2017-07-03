@@ -30,7 +30,7 @@
 
         $sql = "SELECT tbl_Threads.Name, tbl_Threads.Timestamp, Count(tbl_Thread_Posts.Thread_ID) as Replys, tbl_Threads.U_ID, tbl_Users.Name AS
         Users_Name 
-        FROM tbl_Threads 
+        FROM tbl_Threads
         INNER JOIN tbl_Users ON tbl_Threads.User_ID = tbl_Users.U_ID 
         INNER JOIN tbl_Thread_Posts ON tbl_Threads.U_ID = tbl_Thread_Posts.Thread_ID
         WHERE tbl_Threads.Forum_ID = '$forumID'

@@ -4,7 +4,6 @@
     $username = mysqli_real_escape_string($con, $_POST['username']);
     $password = sha1(mysqli_real_escape_string($con, $_POST['password']));
     $sql = "Select * from tbl_Users where Username = '$username' && Password = '$password'";
-    echo $sql;
     $result = mysqli_query($con, $sql);
     if (mysqli_num_rows($result) > 0){
         while ($row = mysqli_fetch_assoc($result)){

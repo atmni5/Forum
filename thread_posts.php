@@ -39,6 +39,15 @@
             echo '</div>';
             echo '<div class="thread_post_right_col">';
             echo $rows['Message'] . '<br />';
+            echo '<div class="thread_tools">';
+            if ($_SESSION["Username"] == $rows["Name"] || $_SESSION["Level"] > 1){
+                echo '<form action="process_thread_delete.php" method="post">';
+                echo '<input type="hidden" value="' . $rows['U_ID'] . '" name="threadID"/>';
+                echo '<input type="hidden" value="' . $rows['Name'] . '" name="userName"/>';
+                echo '<input value="Delete" type="submit" class="thread_delete"/>;
+                echo '</form>';
+            }            
+            echo '</div>';
             echo '</div>';
             echo '</div>';
         }
