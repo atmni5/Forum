@@ -13,7 +13,7 @@
         }     
     }
     else{
-        echo 'account not found';
+       	header('Location: info_page.php?info=Account%20not%20found!');
         die();
     }
 

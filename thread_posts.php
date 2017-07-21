@@ -1,6 +1,6 @@
 <?php 
     include 'header.php';
-?>
+?>    
 
 <?php
 
@@ -16,7 +16,7 @@
 
     $threadID = $_GET['threadID'];
 
-    $sql = "SELECT tbl_Thread_Posts.*, tbl_Users.* FROM tbl_Thread_Posts INNER JOIN tbl_Users ON tbl_Thread_Posts.Poster_ID = tbl_Users.U_ID Where Thread_ID = $threadID";
+    $sql = "SELECT tbl_Thread_Posts.*, tbl_Thread_Posts.U_ID AS postID, tbl_Users.* FROM tbl_Thread_Posts INNER JOIN tbl_Users ON tbl_Thread_Posts.Poster_ID = tbl_Users.U_ID Where Thread_ID = $threadID";
     $result = mysqli_query($con, $sql);
 
     if (mysqli_num_rows($result) > 0){
@@ -42,9 +42,10 @@
             echo '<div class="thread_tools">';
             if ($_SESSION["Username"] == $rows["Name"] || $_SESSION["Level"] > 1){
                 echo '<form action="process_thread_delete.php" method="post">';
-                echo '<input type="hidden" value="' . $rows['U_ID'] . '" name="threadID"/>';
+                echo '<input type="hidden" value="' . $threadID . '" name="threadID"/>';
+				echo '<input type="hidden" value="' . $rows['postID'] . '" name="postID"/>';
                 echo '<input type="hidden" value="' . $rows['Name'] . '" name="userName"/>';
-                echo '<input value="Delete" type="submit" class="thread_delete"/>;
+                echo '<input value="Delete" type="submit" class="thread_delete"/>';
                 echo '</form>';
             }            
             echo '</div>';
@@ -63,7 +64,7 @@
         echo '</form>';
         echo '</div>';
     }
-
+	
 ?>
 
 <?php

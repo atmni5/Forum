@@ -6,10 +6,10 @@
         header('Location: index.php');
     }
 
+    include 'db_connection.php';
+
     $message = mysqli_real_escape_string($con, $_POST['message']);
     $threadID = $_POST['threadID'];
-
-    include 'db_connection.php';
 
     $sql = "insert into tbl_Thread_Posts (Poster_ID, Message, Thread_ID) Values ('" . $_SESSION['U_ID'] . "', '$message', '$threadID')";
 
